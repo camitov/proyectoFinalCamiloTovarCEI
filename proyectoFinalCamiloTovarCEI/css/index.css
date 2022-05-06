@@ -1,0 +1,847 @@
+/* SE AGREGAN LAS FUENTES QUE SE UTILIZAN EN LA PÁGINA WEB*/
+@font-face {
+    font-family: "RalewayExtraBold";
+    src: url('/proyectoFinalCamiloTovarCEI/fonts/Raleway-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: "RalewayBold";
+    src: url('/proyectoFinalCamiloTovarCEI/fonts/Raleway-Bold.ttf');
+}
+
+@font-face {
+    font-family: "RalewayLight";
+    src: url('/proyectoFinalCamiloTovarCEI/fonts/Raleway-Light.ttf');
+}
+
+@font-face {
+    font-family: "RalewayMedium";
+    src: url('/proyectoFinalCamiloTovarCEI/fonts/Raleway-Medium.ttf');
+}
+
+@font-face {
+    font-family: "RalewaySemiBold";
+    src: url('/proyectoFinalCamiloTovarCEI/fonts/Raleway-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "RalewayRegular";
+    src: url('/proyectoFinalCamiloTovarCEI/fonts/Raleway-Regular.ttf');
+}
+
+/* SE QUITA EL PADDIGN Y EL MARGING DE TODOS LOS ELEMENTOS DE LA PÁGINA */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ------------------------ ESTA ES LA SECCIÓN HEADER ------------------------ */
+
+/* SE CAMBIA A MODO FLEX Y SE AJUSTA EL CONTENIDO AL CENTRO DEL CONTENEDOR HEADER*/
+header {
+    display: flex;
+    justify-content: center;
+}
+
+/* SE OCULTA LA IMAGEN DEL TAMAÑO DE ESCRITORIO LLAMANDO A LA CLASE DEL CONTENEDOR */
+.fondoDesktopHome {
+    display: none;
+}
+
+/* SE COLOCA EL 100% TAMAÑO A TODAS LAS IMAGENES DE LA PÁGINA */
+img {
+    width: 100%;
+}
+
+/* SE COLOCAN LOS ELEMENTOS DEL DIV SOBRE LA IMAGEN DE FONDO Y SE AGREGA UN POCO DE ESPACIO A
+LOS BORDES DEL CONTENEDOR DIV QUE ESTA DENTRO DEL HEADER */
+header>div {
+    margin: 0.5rem 1.8rem;
+    position: absolute;
+}
+
+/* SE AJUSTAN LAS IMAGENES A LOS EXTREMOS DEL CONTENEDOR NAV Y SE CENTRAN VERTICALMENTE */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* SE AGREGA EL TAMAÑO DEL CONTENEDOR DE LA IMAGEN LLAMANDO AL ID DEL CONTENDENOR */
+#logo {
+    width: 4rem;
+}
+
+/* SE OCULTA LA IMAGEN A COLOR DEL LOGO */
+.logoCTColor {
+    display: none;
+}
+
+/* SE OCULTA EL MENÚ DESPLEGABLE, SE CAMBIA DE POSICIÓN (ABSOLUTE) POR ENCIMA DE LA IMAGEN DE FONDO, 
+SE AGREGA EL COLOR DE FONDO, SE AGREGA EL ANCHO Y EL ALTO DEL CONTENEDOR DEL MENÚ, SE CAMBIA LA DIRECCIÓN 
+DE FLEX DE HORIZONTAL A COLUMNA, SE AGREGA UN BORDE AL CONTENDENOR DE FORMA REDONDA Y SE AJUSTA LA UBICACIÓN 
+DEL CONTENDEDOR PARA QUE QUEDE EN LA PARTE SUPERIOR DERECHA DE LA PANTALLA */
+#menu {
+    display: none;
+    position: absolute;
+    background-color: #2ab91d;
+    width: 73.5vw;
+    height: 20rem;
+    left: 18.8vw;
+    flex-direction: column;
+    top: -3.7vw;
+    border-bottom-left-radius: 1rem;
+}
+
+.espacio {
+    height: 70px;
+}
+
+/* SE CAMBIA EL FORMATO DE INLINE A BLOCK PARA LOS ENLACES, SE AGREGA EL COLOR DEL TEXTO, SE ELIMINAN LOS 
+SUBRAYADOS DEL TEXTO, SE COLOCA FUENTE Y TAMAÑO DEL TEXTO Y SE COLOCA EL BORDE INFERIOR */
+#menu>a {
+    display: block;
+    line-height: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "RalewaySemiBold";
+    padding-left: 31px;
+    border-bottom: 1px solid white;
+}
+
+/* SE QUITA EL BORDE DEL ÚLTIMO CONTENEDOR DE ENLACE DEL MENÚ */
+#menu>a:last-of-type {
+    border-bottom: none;
+}
+
+/* SE DA ESPACIO CON MARGIN DEL BORDE INFERIOR */
+.btnSlide {
+    margin-bottom: 1rem;
+}
+
+/* SE AGREGA COLOR AL BOTÓN, SE CAMBIA LA FUENTE DEL TEXTO,SE CAMBIA EL TAMAÑO DEL TEXTO, SE COLOCA UN ESTILO Y 
+VELOCIDAD DE TRANSICIÓN, SE COLOCA QUE CUANDO SE PASE POR ENCIMA SE COLCQUE EL CURSOR DE ESTILO POINTER, SE QUITAN
+LOS BORDES SUPERIOR DERCHO E IZQUIERDO, SE COLOCA SOMBRA INFERIOR Y BORDE INFERIOR IZQUIERDA. TODO SE HACE LLAMANDO
+AL BOTÓN QUE ESTÁ EN EL CONTENEDOR DEL ENLACE QUE A SU VEZ SE ENCUENTRA EN LA CLASE DEL DIV LLAMADO ".btnSlide" */
+.btnSlide>a>button {
+    min-width: 73.5vw;
+    height: 44px;
+    color: #fff;
+    font-family: "RalewayBold";
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border-bottom-left-radius: 15px;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-top: 2px solid #ffffff;
+    background: #49a741;
+    box-shadow: 0 6px #366b31;
+}
+
+/* SE CAMBIA LA UBICACIÓN DEL BOTÓN PARA CUANDO PASEN SOBRE EL SUBA 1px Y SE DA SOMBRA AL BOTÓN */
+.btnSlide>a>button:hover {
+    box-shadow: 0 3px #286222;
+    top: 1px;
+}
+
+.btnSlide>a>button:active {
+    box-shadow: 0 0 #366b31;
+    top: 5px;
+}
+
+/* SE QUITA EL FONDO Y LOS BORDES DEL BOTÓN */
+button.hamburger {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* SE COLOCA EN BLOQUE LAS LINEAS DE LA HAMBURUGESA, SE DA UN ANCHO Y ALTO DE CADA UNA DE LAS LINEAS CON WIDTH Y HEIGHT, SE LE DA EL COLOR
+ BLANCO SE DA BORDE REDONDO EN LAS PUNTAS DE CADA LINEA, SE DA ESPACIO ENTRE LAS LINEAS, SE DA UN TIEMPO PARA
+ QUE DURE LA TRANSICIÒN DE OCULTARSE LA BARRA DEL MEDIO CUANDO SE DE CLICK */
+button.hamburger>span.line {
+    display: block;
+    width: 40px;
+    height: 5PX;
+    background-color: white;
+    margin-block: 8px;
+    border-radius: 4px;
+    transition: transform .5s, opacity .25s;
+}
+
+/* SE COLOCA LA CLASE PARA LA PRIMERA LINEA DE LA HAMBURGUESA PARA QUE GUIRE 13px CUANDO SE LE DE CLICK */
+.primera {
+    transform: translateY(13px) rotate(45deg);
+}
+
+/* SE COLOCA LA CLASE PARA LA SEGUNDA LINEA DE LA HAMBURGUESA PARA QUE OCULTE CUANDO SE LE DE CLICK */
+.segunda {
+    opacity: 0;
+}
+
+.tercera {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+.contenedor-titulo-Imagen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-titulo-Imagen>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85vw;
+}
+
+header>div>div>div>h1 {
+    color: white;
+    text-align: center;
+    font-size: 15vw;
+    font-family: 'RalewayExtraBold';
+}
+
+/* ------------------------ ESTA SECCIÓN ES EL ACERCA DE CT ------------------------ */
+
+section#aboutCamilo {
+    margin: 0rem 1.8rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section#aboutCamilo>article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 71vw;
+}
+
+h2 {
+    font-family: "RalewayBold";
+    color: #4E2780;
+    text-align: center;
+    font-size: 2.3rem;
+}
+
+/* SE DA ESPACIO EN LA PARTE SUPERIOR CON MARGITN-TOP DE 0.8rem */
+section#aboutCamilo>article>div>p {
+    font-family: "RalewayMedium";
+    text-align: center;
+    margin-top: 0.8rem;
+    font-size: 1.5rem;
+}
+
+section#aboutCamilo>article>div>p>span {
+    font-family: "RalewayMedium";
+    color: #8C44E9;
+}
+
+/* SE SELECCIONA EL CONENEDOR DIV 2 QUE ESTÁ DENTRO DEL CONTENEDOR ARTICLE QUE 
+SE ENCUENTRAN DENTRO DEL SECTION CON EL ID LLAMADO "aboutCamilo" */
+section#aboutCamilo>article>div:nth-child(2) {
+    margin-top: 1.2rem;
+}
+
+/* ------------------------ ESTA SECCIÓN ES EL CARRUSEL ------------------------ */
+
+#carruselDescktop {
+    display: none;
+}
+
+section#services {
+    margin: 2.5rem 0rem 0rem;
+}
+
+section#services>h2 {
+    margin: 0rem 1.8rem 0.5rem;
+}
+
+.tarjeta {
+    border: 3.1px solid #4E2780;
+    border-radius: 2rem;
+    margin: 1rem 0.5rem;
+    box-shadow: 2px 4px 0px 0px #4E2780;
+    text-align: center;
+    width: 20rem;
+}
+
+.imgLogoSlide {
+    display: flex;
+    justify-content: center;
+}
+
+.imgLogoSlide>div {
+    width: 4rem;
+    margin: 1rem;
+}
+
+.contentSlide {
+    margin: 0.2rem 0.8rem 1.3rem;
+}
+
+.contentSlide>h3 {
+    font-family: "RalewayBold";
+    margin: 0rem 0rem 1rem;
+    font-size: 1.7rem;
+    text-align: center;
+    color: #4E2780;
+}
+
+.contentSlide>p {
+    font-family: "RalewayMedium";
+    font-size: 1.2rem;
+    margin: 0.3rem 0rem 0rem;
+    text-align: center;
+}
+
+div.tarjeta>div.btnSlide>a>button {
+    min-width: 150px;
+    height: 40px;
+    border-radius: 15px;
+    background: #8C44E9;
+    box-shadow: 0 5px #5f1cb7;
+}
+
+div.tarjeta>div.btnSlide>a>button:hover {
+    box-shadow: 0 3px #5f1cb7;
+}
+
+div.tarjeta>div.btnSlide>a>button:active {
+    box-shadow: 0 0 #5f1cb7;
+}
+
+/* ------------------------ESTA SECCIÓN ES ¿COMO ES EL PROCESO?------------------------ */
+
+section#howProcess {
+    margin: 2.5rem 0rem 0rem;
+}
+
+section#howProcess>h2 {
+    margin: 0rem 1.8rem 0.5rem;
+}
+
+section#howProcess>div {
+    margin: 1.5em 1.8rem 0rem;
+}
+
+section#howProcess>div>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 0rem 1.5rem;
+}
+
+section#howProcess>div>div>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#howProcess>div>div>div:first-of-type {
+    width: 25vh;
+}
+
+section#howProcess>div>div>div:last-of-type {
+    text-align: justify;
+    font-family: "RalewayMedium";
+    width: 75vh;
+    margin-left: 0.8rem;
+}
+
+section#howProcess>div>div>div>p {
+    font-family: "RalewayMedium";
+    font-size: 4.5vw;
+}
+
+section#howProcess>div>div>div>p>span {
+    color: #8C44E9;
+}
+
+/* ------------------------ ESTA SECCIÓN ES ESPECTATIVAS ------------------------ */
+
+section#expects {
+    margin: 2.5rem 0rem 0rem;
+}
+
+section#expects>h2 {
+    margin: 0rem 1.8rem 0.5rem;
+}
+
+section#expects>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1.5em 1.8rem 0rem;
+}
+
+section#expects>div>div:first-of-type {
+    width: 12rem;
+}
+
+section#expects>div>div>div {
+    margin: 0.6rem 0rem;
+    border: 2px solid #4E2780;
+    border-radius: 0.8rem;
+    box-shadow: 2px 2px 0px 0px #4E2780;
+    padding: 0.2rem 0.8rem;
+    text-align: center;
+}
+
+section#expects>div>div>div>h3 {
+    font-family: "RalewayBold";
+    font-size: 1.3rem;
+    color: #4E2780;
+    margin: 0.4rem 0rem 0.4rem;
+}
+
+section#expects>div>div>div>p {
+    font-family: "RalewayMedium";
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ------------------------ESTA SECCIÓN ES CERTIFICACIONES------------------------ */
+
+section#certifications {
+    margin: 1.8rem 0rem;
+}
+
+section#certifications>h2 {
+    margin: 0rem 1.7rem;
+}
+
+section#certifications>div {
+    margin: 0.8rem 1.8rem 0rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+section#certifications>div>div {
+    margin-top: 1rem;
+    width: 8.6rem;
+}
+
+section#certifications>div>div>div:first-of-type {
+    width: 8.6rem;
+}
+
+section#certifications>div>div>div:last-of-type>p {
+    font-family: "RalewaySemiBold";
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+/* ------------------------ESTA SECCIÓN ES FOOTER------------------------ */
+
+footer {
+    background-color: #8C44E9;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 1.8rem;
+}
+
+footer>div:first-of-type {
+    width: 5rem;
+    margin-top: 2rem;
+}
+
+footer>div>div {
+    margin: 0.5rem;
+}
+
+footer>div:last-of-type>div:nth-child(1)>div:first-of-type {
+    display: flex;
+    flex-direction: column;
+}
+
+footer>div:last-of-type>div:nth-child(1)>div:first-of-type>h4 {
+    font-family: "Ralewaybold";
+    color: white;
+    font-size: 1.2rem;
+}
+
+footer>div:last-of-type>div:nth-child(1)>div:first-of-type>a {
+    color: white;
+    margin: 0.2rem 0rem 0.5rem 0.5rem;
+    font-family: "RalewayMedium";
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+footer>div:last-of-type>div:last-of-type>div:first-of-type {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer>div:last-of-type>div:last-of-type>div:last-of-type {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+footer>div:last-of-type>div:last-of-type>div>div {
+    width: 11vw;
+}
+
+footer>div:last-of-type>div:last-of-type>div.btnSlide>a>button {
+    min-width: 150px;
+    height: 40px;
+    border-radius: 15px;
+    background: #2AB91D;
+    box-shadow: 0 5px #208817;
+}
+
+footer>div:last-of-type>div:last-of-type>div.btnSlide>a>button:hover {
+    box-shadow: 0 3px #208817;
+}
+
+footer>div:last-of-type>div:last-of-type>div.btnSlide>a>button:active {
+    box-shadow: 0 0 #208817;
+}
+
+/* ------------------------ MEDIAS QUERYS ------------------------ */
+
+/* SE AGREGA LA MEDIA QUERY PARA QUE SE EMPIEZEN A REALIZAR LOS CAMBIOS A PARTIR DE QUE LA PANTALLA SEA MÁS GRANDE QUE 600px  */
+@media (min-width: 600px) {
+
+    /* ------------------------ SECCIÓN HEADER ------------------------ */
+
+    .fondoMovilHome {
+        display: none;
+    }
+
+    .fondoDesktopHome {
+        display: flex;
+        overflow: auto;
+    }
+
+    .logoCTBlanco {
+        display: none;
+    }
+
+    .logoCTColor {
+        display: block;
+    }
+
+    #menu {
+        width: 49.3vw;
+        left: 40vw;
+    }
+
+    .btnSlide>a>button {
+        min-width: 49.3vw;
+    }
+
+    /* SE SELECCIONA EL CONTENEDOR CON LA CLASE LLAMADA "contenedor-titulo-Imagen" Y SE CAMBIA LA DIRECCIÓN
+    CON "row-reverse" PARA INTERCAMBIARLOS HORIZONTALMENTE DE ORDEN */
+    .contenedor-titulo-Imagen {
+        flex-direction: row-reverse;
+        margin-top: 1rem;
+    }
+
+    .contenedor-titulo-Imagen>div {
+        width: 39vw;
+    }
+
+    header>div>div>div>h1 {
+        font-size: 7vw;
+        padding-bottom: 2rem;
+    }
+
+    /* ------------------------ESTA SECCIÓN ES EL ABOUT CAMILO------------------------ */
+
+    section#aboutCamilo {
+        margin-top: 2rem;
+    }
+
+    section#aboutCamilo>article {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 85vw;
+    }
+
+    section#aboutCamilo>article>div:first-of-type {
+        width: 43rem;
+    }
+
+    section#aboutCamilo>article>div:last-of-type {
+        padding-left: 1.5rem;
+        width: 28rem;
+    }
+
+    section#aboutCamilo>article>div>p {
+        font-size: 2.5vw;
+    }
+
+    h2 {
+        font-size: 5.5vw;
+    }
+
+    /* ------------------------ ESTA SECCIÓN ES EL CARRUSEL ------------------------ */
+
+    section#services {
+        margin: 4.5rem 0rem 5rem;
+    }
+
+    section#services>h2 {
+        margin: 0rem 1.8rem 2rem;
+    }
+
+    /* ------------------------ ESTA SECCIÓN ES ¿COMO ES EL PROCESO? ------------------------ */
+
+    section#howProcess>div {
+        margin: 2.5rem 1.8rem 0rem;
+    }
+
+    section#howProcess>div>div {
+        margin: 0rem 0rem 2.5rem;
+    }
+
+    section#howProcess>div>div>div:first-of-type {
+        width: 11vw;
+    }
+
+    section#howProcess>div>div>div:last-of-type {
+        width: 47vw;
+        margin-left: 4vw;
+    }
+
+    section#howProcess>div>div>div>p {
+        font-size: 2.5vw;
+    }
+
+    /* ------------------------ ESTA SECCIÓN ES ESPECTATIVAS ------------------------ */
+
+    section#expects {
+        margin: 4.5rem 0rem 0rem;
+    }
+
+    section#expects>h2 {
+        margin-bottom: 2.5rem;
+    }
+
+    section#expects>div {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    section#expects>div>div:first-of-type {
+        width: 30vw;
+        margin-right: 2rem;
+    }
+
+    section#expects>div>div:last-of-type {
+        width: 52vw;
+    }
+
+    /* ------------------------ ESTA SECCIÓN ES FOOTER------------------------ */
+
+    footer {
+        height: 30vh;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    footer>div:last-of-type>div:last-of-type>div>div {
+        width: 5vw;
+        margin: 0px 1.4vw;
+    }
+}
+
+/* SE REALIZA EL AJUSTE DE LAS SECCIONES DE LA PÁGINA PARA CUANDO LA PANTALLA SUPERE LOS 100px */
+@media (min-width: 1000px) {
+
+    /* ------------------------ ESTA SECCIÓN ES EL HEADER ------------------------ */
+
+    header>div {
+        width: 88vw;
+    }
+
+    .div-hamburger {
+        display: none;
+    }
+
+    #logo {
+        width: 5rem;
+    }
+
+    #menu {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        background-color: transparent;
+        width: 53vw;
+        height: 4rem;
+        left: auto;
+        top: auto;
+        justify-content: end;
+        align-items: center;
+    }
+
+    #menu>a {
+        line-height: normal;
+        padding: 1rem 0rem;
+        width: 8rem;
+        text-align: center;
+        border: none;
+    }
+
+    .espacio {
+        display: none;
+    }
+
+    #btnMenuContact {
+        margin-bottom: 0;
+    }
+
+    #btnMenuContact>a>button {
+        min-width: 150px;
+        height: 40px;
+        border-radius: 15px;
+        background: #2AB91D;
+        box-shadow: 0 5px #208817;
+        border-top: none;
+    }
+
+    #btnMenuContact>a>button:hover {
+        box-shadow: 0 3px #208817;
+    }
+
+    #btnMenuContact>a>button:active {
+        box-shadow: 0 0 #208817;
+    }
+
+    .contenedor-titulo-Imagen>div>h1 {
+        padding-bottom: 0;
+        font-size: 5.5vw;
+    }
+
+    .contenedor-titulo-Imagen {
+        justify-content: space-around;
+        margin-top: 2rem;
+    }
+
+    /* ------------------------ESTA SECCIÓN ES ACERCA DE CT------------------------ */
+
+    section#aboutCamilo>article {
+        width: 70vw;
+    }
+
+    h2 {
+        font-size: 3.7vw;
+    }
+
+    /* ------------------------ESTA SECCIÓN ES EL CARRUSEL QUE DESAPARECE Y SE PONEN LAS TARJETAS EN ESTÁTICA------------------------ */
+
+    #carruselMovil {
+        display: none;
+    }
+
+    /* SE AJUSTAN LAS TARJETAS APARECIENDO EL DIV QUE LAS CONTIENE CON EL ID LLAMADO "#carruselDescktop" */
+    #carruselDescktop {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10rem;
+    }
+
+    /* ------------------------ESTA SECCIÓN ES ESPECTATIVAS------------------------ */
+
+    section#expects>div>div:last-of-type {
+        width: 45vw;
+    }
+
+    section#expects>div>div>div>h3 {
+        font-size: 2vw;
+    }
+
+    section#expects>div>div>div>p {
+        font-size: 1.8vw;
+    }
+
+    /* ------------------------ESTA SECCIÓN ES CERTIFICACIONES------------------------ */
+
+    section#certifications {
+        display: flex;
+        flex-direction: column;
+        margin: 4rem 8rem;
+        padding: 0 2rem;
+    }
+
+    section#certifications>h2 {
+        margin-bottom: 2rem;
+    }
+
+    section#certifications>div>div {
+        width: 12vw;
+    }
+
+    section#certifications>div>div>div:first-of-type {
+        width: 12vw;
+    }
+
+    section#certifications>div>div>div:last-of-type>p {
+        margin: 1.5rem 0;
+        font-size: 1.4vw;
+    }
+
+    /* ------------------------ESTA SECCIÓN ES FOOTER------------------------ */
+
+    footer {
+        flex-direction: row;
+        height: 50vh;
+    }
+
+    footer>div>div {
+        margin: 0.5rem 3.2vw;
+    }
+
+    footer>div:first-of-type {
+        width: 11rem;
+        padding: 0 7vw;
+    }
+
+    footer>div:last-of-type>div:nth-child(1)>div:first-of-type {
+        width: 14rem;
+    }
+
+    footer>div:last-of-type>div:nth-child(1)>div:first-of-type>h4 {
+        font-size: 2.2rem;
+    }
+
+    footer>div:last-of-type>div:nth-child(1)>div:first-of-type>a {
+        font-size: 1.5rem;
+    }
+
+    footer>div:last-of-type>div:last-of-type>div>div {
+        width: 5vw;
+        margin: 0px 1.4vw;
+    }
+
+    footer>div:last-of-type>div:last-of-type>div.btnSlide>a>button {
+        min-width: 254px;
+        height: 52px;
+        font-size: 1.6rem;
+    }
+}

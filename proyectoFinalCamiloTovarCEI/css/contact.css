@@ -1,0 +1,581 @@
+@font-face {
+    font-family: "RalewayExtraBold";
+    src: url('/proyectoFinalCamiloTovarCEI/fonts/Raleway-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: "RalewayBold";
+    src: url('/proyectoFinalCamiloTovarCEI/fonts/Raleway-Bold.ttf');
+}
+
+@font-face {
+    font-family: "RalewayLight";
+    src: url('/proyectoFinalCamiloTovarCEI/fonts/Raleway-Light.ttf');
+}
+
+@font-face {
+    font-family: "RalewayMedium";
+    src: url('/proyectoFinalCamiloTovarCEI/fonts/Raleway-Medium.ttf');
+}
+
+@font-face {
+    font-family: "RalewaySemiBold";
+    src: url('/proyectoFinalCamiloTovarCEI/fonts/Raleway-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "RalewayRegular";
+    src: url('/proyectoFinalCamiloTovarCEI/fonts/Raleway-Regular.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* SE COLOCA UN COLOR DE FONDO A TODA LA PÁGINA */
+body {
+    background-color: #411d6f;
+}
+
+/* ------------------------ SECCIÓN HEADER ------------------------ */
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+.fondoDesktopHome {
+    display: none;
+}
+
+img {
+    width: 100%;
+}
+
+header>div {
+    margin: 0.5rem 1.8rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    width: 4rem;
+}
+
+#menu {
+    display: none;
+    position: absolute;
+    background-color: #2ab91d;
+    width: 73.5vw;
+    height: 20rem;
+    left: 26.4vw;
+    flex-direction: column;
+    top: -3.7vw;
+    border-bottom-left-radius: 1rem;
+}
+
+.espacio {
+    height: 70px;
+}
+
+#menu>a {
+    display: block;
+    line-height: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: "RalewaySemiBold";
+    padding-left: 31px;
+    border-bottom: 1px solid white;
+}
+
+#menu>a:last-of-type {
+    border-bottom: none;
+}
+
+.btnSlide {
+    margin-bottom: 1rem;
+}
+
+.btnSlide>a>button {
+    min-width: 73.5vw;
+    height: 44px;
+    color: #fff;
+    font-family: "RalewayBold";
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border-bottom-left-radius: 15px;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-top: 2px solid #ffffff;
+    background: #49a741;
+    box-shadow: 0 6px #366b31;
+}
+
+.btnSlide>a>button:hover {
+    box-shadow: 0 3px #286222;
+    top: 1px;
+}
+
+.btnSlide>a>button:active {
+    box-shadow: 0 0 #366b31;
+    top: 5px;
+}
+
+button.hamburger {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+button.hamburger>span.line {
+    display: block;
+    width: 40px;
+    height: 5PX;
+    background-color: white;
+    margin-block: 8px;
+    border-radius: 4px;
+    transition: transform .5s, opacity .25s;
+}
+
+.primera {
+    transform: translateY(13px) rotate(45deg);
+}
+
+.segunda {
+    opacity: 0;
+}
+
+.tercera {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+.contenedor-titulo-Imagen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.contenedor-titulo-Imagen>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 85vw;
+}
+
+header>div>div>div>h1 {
+    color: white;
+    text-align: center;
+    font-size: 13vw;
+    font-family: 'RalewayExtraBold';
+}
+
+.contenedor-titulo-Imagen>form {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-titulo-Imagen>form>div>label {
+    color: white;
+    font-size: 5vw;
+    font-family: "RalewaySemiBold";
+    padding-left: 1rem;
+}
+
+.contenedor-titulo-Imagen>form>div>div>input {
+    margin: 6px;
+    width: 17rem;
+    height: 2.4rem;
+    border-radius: 2rem;
+    padding-left: 1rem;
+}
+
+.contenedor-titulo-Imagen>form>div>input {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 4px;
+}
+
+.contenedor-titulo-Imagen>form>div:nth-child(4) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7px;
+}
+
+.contenedor-titulo-Imagen>form>div:nth-child(4)>label {
+    padding-left: 2px;
+}
+
+.contenedor-titulo-Imagen>form>div:nth-child(4)>label {
+    font-size: 3vw;
+}
+
+.contenedor-titulo-Imagen>form>div:nth-child(4)>label>span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.contenedor-titulo-Imagen>form>div:nth-child(5)>a>button {
+    margin-top: 15px;
+    border-radius: 15px;
+}
+
+/* ------------------------ESTA SECCIÓN ES HOW IS THE PROCESS------------------------ */
+
+h2 {
+    font-family: "RalewayBold";
+    color: white;
+    text-align: center;
+    font-size: 2.3rem;
+}
+
+section#howProcess {
+    padding-bottom: 5rem;
+}
+
+section#howProcess>h2 {
+    margin: -0.1rem 1.8rem 0.5rem;
+    padding: 2rem 0rem;
+}
+
+section#howProcess>div {
+    margin: 1.5em 1.8rem 0rem;
+}
+
+section#howProcess>div>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0rem 0rem 1.5rem;
+}
+
+section#howProcess>div>div>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#howProcess>div>div>div:first-of-type {
+    width: 25vh;
+}
+
+section#howProcess>div>div>div:last-of-type {
+    text-align: justify;
+    font-family: "RalewayMedium";
+    width: 75vh;
+    margin-left: 0.8rem;
+}
+
+section#howProcess>div>div>div>p {
+    font-family: "RalewayMedium";
+    font-size: 4.5vw;
+    color: white;
+}
+
+section#howProcess>div>div>div>p>span {
+    color: #00ffb8;
+}
+
+/* ------------------------ESTA SECCIÓN ES FOOTER------------------------ */
+
+footer {
+    background-color: #8C44E9;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem 1.8rem;
+}
+
+footer>div:first-of-type {
+    width: 5rem;
+    margin-top: 2rem;
+}
+
+footer>div>div {
+    margin: 0.5rem;
+}
+
+footer>div:last-of-type>div:nth-child(1)>div:first-of-type {
+    display: flex;
+    flex-direction: column;
+}
+
+footer>div:last-of-type>div:nth-child(1)>div:first-of-type>h4 {
+    font-family: "Ralewaybold";
+    color: white;
+    font-size: 1.2rem;
+}
+
+footer>div:last-of-type>div:nth-child(1)>div:first-of-type>a {
+    color: white;
+    margin: 0.2rem 0rem 0.5rem 0.5rem;
+    font-family: "RalewayMedium";
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+footer>div:last-of-type>div:last-of-type>div:first-of-type {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer>div:last-of-type>div:last-of-type>div:last-of-type {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+footer>div:last-of-type>div:last-of-type>div>div {
+    width: 11vw;
+}
+
+footer>div:last-of-type>div:last-of-type>div.btnSlide>a>button {
+    min-width: 150px;
+    height: 40px;
+    border-radius: 15px;
+    background: #2AB91D;
+    box-shadow: 0 5px #208817;
+}
+
+footer>div:last-of-type>div:last-of-type>div.btnSlide>a>button:hover {
+    box-shadow: 0 3px #208817;
+}
+
+footer>div:last-of-type>div:last-of-type>div.btnSlide>a>button:active {
+    box-shadow: 0 0 #208817;
+}
+
+/* ------------------------ MEDIAS QUERYS ------------------------ */
+
+@media (min-width: 600px) {
+
+    /* ------------------------ SECCIÓN HEADER ------------------------ */
+
+    .fondoMovilHome {
+        display: none;
+    }
+
+    .fondoDesktopHome {
+        display: flex;
+        overflow: auto;
+    }
+
+    #menu {
+        width: 49.3vw;
+        left: 50.7vw;
+    }
+
+    .btnSlide>a>button {
+        min-width: 49.3vw;
+    }
+
+    .contenedor-titulo-Imagen {
+        flex-direction: row;
+        margin-top: 1rem;
+    }
+
+    .contenedor-titulo-Imagen>div {
+        width: 39vw;
+    }
+
+    header>div>div>div>h1 {
+        font-size: 6vw;
+        padding-bottom: 2rem;
+        margin-right: 2rem;
+    }
+
+    h2 {
+        font-size: 5.5vw;
+    }
+
+    .contenedor-titulo-Imagen>form>div>label {
+        font-size: 3vw;
+    }
+
+    .contenedor-titulo-Imagen>form>div:nth-child(4)>label {
+        font-size: 1.5vw;
+    }
+
+    .contenedor-titulo-Imagen>form>div:nth-child(5)>a>button {
+        min-width: 27.3vw;
+    }
+
+    /* ------------------------ESTA SECCIÓN ES HOW IS THE PROCESS------------------------ */
+
+    section#howProcess>div {
+        margin: 2.5rem 1.8rem 0rem;
+    }
+
+    section#howProcess>div>div {
+        margin: 0rem 0rem 2.5rem;
+    }
+
+    section#howProcess>div>div>div:first-of-type {
+        width: 11vw;
+    }
+
+    section#howProcess>div>div>div:last-of-type {
+        width: 47vw;
+        margin-left: 4vw;
+    }
+
+    section#howProcess>div>div>div>p {
+        font-size: 2.5vw;
+    }
+
+    /* ------------------------ESTA SECCIÓN ES FOOTER------------------------ */
+
+    footer {
+        height: 30vh;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    footer>div:last-of-type>div:last-of-type>div>div {
+        width: 5vw;
+        margin: 0px 1.4vw;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    /* ------------------------ SECCIÓN HEADER ------------------------ */
+
+    header>div {
+        width: 88vw;
+    }
+
+    .div-hamburger {
+        display: none;
+    }
+
+    #logo {
+        width: 5rem;
+    }
+
+    #menu {
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        background-color: transparent;
+        width: 53vw;
+        height: 4rem;
+        left: auto;
+        top: auto;
+        justify-content: end;
+        align-items: center;
+    }
+
+    #menu>a {
+        line-height: normal;
+        padding: 1rem 0rem;
+        width: 8rem;
+        text-align: center;
+        border: none;
+    }
+
+    .espacio {
+        display: none;
+    }
+
+    #btnMenuContact {
+        margin-bottom: 0;
+    }
+
+    #btnMenuContact>a>button {
+        min-width: 150px;
+        height: 40px;
+        border-radius: 15px;
+        background: #2AB91D;
+        box-shadow: 0 5px #208817;
+        border-top: none;
+    }
+
+    #btnMenuContact>a>button:hover {
+        box-shadow: 0 3px #208817;
+    }
+
+    #btnMenuContact>a>button:active {
+        box-shadow: 0 0 #208817;
+    }
+
+    .contenedor-titulo-Imagen>div>h1 {
+        padding-bottom: 0;
+        font-size: 5.5vw;
+    }
+
+    .contenedor-titulo-Imagen {
+        justify-content: space-around;
+        margin-top: 2rem;
+    }
+
+    h2 {
+        font-size: 3.7vw;
+    }
+
+    .contenedor-titulo-Imagen>form>div>div>input {
+        margin: 15px;
+        width: 28rem;
+        height: 2.9rem;
+    }
+
+    /* ------------------------ESTA SECCIÓN ES FOOTER------------------------ */
+
+    footer {
+        flex-direction: row;
+        height: 50vh;
+    }
+
+    footer>div>div {
+        margin: 0.5rem 3.2vw;
+    }
+
+    footer>div:first-of-type {
+        width: 11rem;
+        padding: 0 7vw;
+    }
+
+    footer>div:last-of-type>div:nth-child(1)>div:first-of-type {
+        width: 14rem;
+    }
+
+    footer>div:last-of-type>div:nth-child(1)>div:first-of-type>h4 {
+        font-size: 2.2rem;
+    }
+
+    footer>div:last-of-type>div:nth-child(1)>div:first-of-type>a {
+        font-size: 1.5rem;
+    }
+
+    footer>div:last-of-type>div:last-of-type>div>div {
+        width: 5vw;
+        margin: 0px 1.4vw;
+    }
+
+    footer>div:last-of-type>div:last-of-type>div.btnSlide>a>button {
+        min-width: 254px;
+        height: 52px;
+        font-size: 1.6rem;
+    }
+}
